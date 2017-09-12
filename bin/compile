@@ -72,6 +72,7 @@ status "==> Downloading OpenResty..." \
  && readonly NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
  && echo "using upto $NPROC threads" \
  && ./configure \
+    --with-http_auth_request_module
     --prefix=$OPENRESTY_PREFIX \
     -j${NPROC} \
  && echo "==> Building OpenResty..." \
