@@ -10,7 +10,7 @@ build_dir=$1
 cache_dir=$2
 
 # openresty version, installation version can be changed by changing the version number
-OPENRESTY_VERSION=1.11.2.4
+OPENRESTY_VERSION=1.9.3.1
 OPENRESTY_PREFIX=$build_dir/openresty
 
 compile_buildpack_dir=$(cd $(dirname $0); cd ..; pwd)
