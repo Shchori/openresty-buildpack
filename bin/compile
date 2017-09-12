@@ -68,7 +68,7 @@ export PATH="$PATH:/usr/local/sbin:/usr/sbin/:/sbin"
 status "==> Downloading OpenResty..." \
  && wget -qO- https://openresty.org/download/openresty-${OPENRESTY_VERSION}.tar.gz | tar xvz \
  && echo "==> Configuring OpenResty..." \
- && cd ngx_openresty-* \
+ && cd openresty-* \
  && readonly NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
  && echo "using upto $NPROC threads" \
  && ./configure \
