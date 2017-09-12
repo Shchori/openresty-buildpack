@@ -66,7 +66,7 @@ export PATH="$PATH:/usr/local/sbin:/usr/sbin/:/sbin"
 
 # download and install openresty
 status "==> Downloading OpenResty..." \
- && curl -sSL http://openresty.org/download/ngx_openresty-${OPENRESTY_VERSION}.tar.gz | tar -xvz \
+ && wget -qO- https://openresty.org/download/openresty-${OPENRESTY_VERSION}.tar.gz | tar xvz \
  && echo "==> Configuring OpenResty..." \
  && cd ngx_openresty-* \
  && readonly NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
